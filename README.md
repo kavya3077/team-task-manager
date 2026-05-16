@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+**Team Task Manager**
+A full-stack Team Task Manager application built using Next.js, Prisma, PostgreSQL, NextAuth, and Tailwind CSS.
 
-## Getting Started
+deployed link : https://team-task-manager-production-7597.up.railway.app/
 
-First, run the development server:
+IMPORTANT : 
+1. To create project or tasks, one has to login as ADMIN user. Member user cannot create project or tasks, it has only view funnctionlaity.
+2. Maintain this order : create a user (admin), create a project, create tasks under the project and assign it to any user. (needed only once)
 
-```bash
+**Features**
+Authentication (Login / Signup)
+Role-Based Access (Admin / Member)
+Project Management
+Task Assignment & Tracking
+Dashboard Analytics
+
+**Tech Stack**
+Next.js
+PostgreSQL
+Prisma ORM
+NextAuth
+Tailwind CSS
+
+**Run Locally**
+npm install
+npx prisma migrate dev --name init
+npx prisma generate
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Environment Variables needed
+DATABASE_URL
+NEXTAUTH_SECRET
+NEXTAUTH_URL
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Deployed using Railway with PostgreSQL.
